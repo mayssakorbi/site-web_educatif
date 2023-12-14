@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    left: 500px;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)50%), url(r.jfif);
+    background-position: center;
+    background-size: cover;
+    height: 109vh;
+}
+
+.form {
+    width: 300px;
+    height: 390px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8)50%, rgba(0, 0, 0, 0.8)50%);
+    position: absolute;
+    top: 300px;
+    left: 590px;
+    border-radius: 20px;
+    padding: 25px;
+    margin-top: -140px;
+}
+
+.form h2 {
+    width: 220px;
+    font-family: sans-serif;
+    text-align: center;
+    color: blue;
+    font-size: 22px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 2px;
+    padding: 8px;
+}
+
+.form input {
+    width: 300px;
+    height: 35px;
+    background: transparent;
+    border-bottom: 1px solid grey;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+}
+
+.form input:focus {
+    outline: #fff;
+}
+
+ ::placeholder {
+    color: #31E1F7;
+    font-family: Arial;
+}
+
+.btnn {
+   
+    width: 500px;
+    height: 50px;
+    background: #31E1F7;
+    border: 2px solid #31E1F7;
+    margin-top: -30px;
+    font-size: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.4s ease;
+    text-align: center;
+}
+
+.bout {
+    float: center;
+    margin-top: 80px;
+}
+
+.btnn:hover {
+    background: #fff;
+    color: blue;
+}
+
+.btnn a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+.link {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.link a {
+    color: blue;
+}
+
+.form.link a {
+    text-decoration: none;
+    color: blue;
+}
+
+.liw {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.titref{
+    padding-top: 5%;
+    padding-left: 4%;
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

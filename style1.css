@@ -1,0 +1,141 @@
+header{
+    background-color: #0367A6;
+    height: 100px;
+    width: 100%;
+    
+    margin-top: 0%;
+}
+header img{
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    float: left;
+    width: 6%;
+    height: 100%;
+}
+header h1{
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    
+    color: azure;
+    margin-left: 15%;
+    margin-top: 0%;
+    font-size: 300%;
+}
+header .c{
+    -ms-transform: translateY(50%);
+    transform: translateY(30%);
+}
+header .right{
+    float: right;
+    margin-top: -60px;
+    margin-right: 20px;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+section{
+    display: inline-block;
+}
+.big{
+    color: #004369;
+    font-size: 100px;
+    margin-top: 15%;
+}
+.ligne{
+    width: 5px;
+    height: 800px;
+    float: center;
+    margin-left: 650px;
+    margin-top: -380px;
+    background-color: #c2e9f2;
+    border-radius: 5px;
+}
+.mat{
+    display: grid;
+    grid-gap: 90px;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 5px;
+    width: 60%;
+    margin-left: 48%;
+    margin-top: -780px;
+
+}
+
+.matt img{
+    width: 40%;
+    padding-top: 10px;
+    padding-bottom: -10px;
+    padding-left: 40px;
+}
+.matt h2{
+    width: 10px;
+    height: 50px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+.matt{
+    box-shadow: 2px 1px 5px rgba(209, 217, 230, 1);
+    width: 55%;
+    height: 140%;
+    border-radius: 30px;
+}
+.matt:hover{
+    transform: scale(0.9);
+    border: 3px solid green;
+    animation: fzoom ease 0.2s;
+}
+
+@keyframes fzoom {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(0.99);
+    }
+    50% {
+        transform: scale(0.96);
+    }
+    75% {
+        transform: scale(0.93);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+
+.mat2{
+    display: grid;
+    grid-gap: 90px;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 5px;
+    width: 60%;
+    margin-top: 150px;
+}
+.ligne2{
+    width: 5px;
+    height: 800px;
+    float: center;
+    margin-left: 780px;
+    margin-top: -700px;
+    background-color: #c2e9f2;
+    border-radius: 5px;
+
+}
+.big2{
+    color: #004369;
+    font-size: 100px;
+    margin-top: -400px;
+    float: right;
+
+}
+.second{
+    margin-top: 50px;
+}

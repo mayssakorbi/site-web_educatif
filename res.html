@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ViEnsi</title>
+    <link rel="stylesheet" href="res style.css">
+</head>
+
+<body>
+    <div class=" main ">
+
+        <h1 class="titref"> You don't have an accout? Creat yours!</h1>
+        <div class="content ">
+            <div class="form ">
+                <input type="email " name="email " id="email" placeholder="Entrer votre Email ">
+                <input type="number " name=" " id="ncin" placeholder="Entrer votre cin">
+                <input type="password" id="password" name=" " placeholder="Entrer votre mot de passe">
+                <input type="submit" id="signUp" name="Se connecter" class="btnn " placeholder="Se connecter" >
+
+             
+                    
+
+                
+
+
+
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script><script src="https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js"></script>
+    <script src="/.mail.js"></script>
+    <script >
+        import {db} from './mail.js'
+
+
+    </script>
+</body>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+    import { getDatabase,set,ref } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDUWuDn1D7elWg5wN1Y-yZgUekGXjvC3t8",
+      authDomain: "last-5a4c3.firebaseapp.com",
+      databaseURL: "https://last-5a4c3-default-rtdb.firebaseio.com",
+      projectId: "last-5a4c3",
+      storageBucket: "last-5a4c3.appspot.com",
+      messagingSenderId: "926945091435",
+      appId: "1:926945091435:web:94b1de6a2715ef745ff62e"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database=getDatabase(app);
+    const auth = getAuth();
+    signUp.addEventListener('click',(e)=>{
+        var email=document.getElementById('email').value;
+        var password=document.getElementById('password').value;
+        var cin=document.getElementById('ncin').value;
+
+
+        createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    set(ref(database,'users/'+user.uid),{
+        email:email, password:password ,ncin:cin
+
+    })
+    alert('user___ceated');
+    window.location.href = "../accueil/index.html";
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    alert(errorMessage)
+    // ..
+  });
+
+    })
+  </script>
+
+</html>
